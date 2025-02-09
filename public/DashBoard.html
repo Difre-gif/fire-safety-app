@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Alert Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/DashBoard.css">
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">Fire Alert Dashboard</div>
+            <div class="icons">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Real-Time Fire Alerts -->
+            <div class="real-time-alerts">
+                <h2>Real-Time Fire Alerts</h2>
+                <div class="map-container" id="fireMap"></div>
+            </div>
+
+            <!-- Quick Access -->
+           <div class="post">
+        <h2>Quick Post a Fire Emergency</h2>
+        <input type="text" id="emergencyText" placeholder="Describe the emergency">
+        <button onclick="postEmergency()">Submit</button>
+        <p id="message"></p>
+    </div>
+            <br>
+            <div class="quick-access">
+
+                <div class="card">
+                    <span>Fire Safety Tips</span>
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <div class="card">
+                    <span>Emergency Contacts</span>
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="card">
+                    <span>Nearby Fire Stations</span>
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+            </div>
+
+            <!-- Alerts List -->
+            <div class="alerts-list" id="alertsList">
+                <h3>Active Fire Alerts</h3>
+                <!-- Alerts will be dynamically populated here -->
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Fire Alert Dashboard &copy; 2025 | <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+
+    <!-- Leaflet.js Script -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="../js/map.js"></script>
+</body>
+</html>

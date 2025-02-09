@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #FF4C4C, #008CFF);
+    animation: gradientShift 10s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% { background: linear-gradient(135deg, #FF4C4C, #008CFF); }
+    50% { background: linear-gradient(135deg, #FFB74D, #28A745); }
+    100% { background: linear-gradient(135deg, #FF4C4C, #008CFF); }
+}
+
+/* Page Container */
+.page-container {
+    width: 100%;
+    max-width: 450px;
+    height: 600px;
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Form Container (Login / Sign Up) */
+.form-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Front and Back Forms */
+.front {
+    background: linear-gradient(135deg, #008CFF, #005BB5);
+    color: white;
+}
+
+.back {
+    background: linear-gradient(135deg, #FF4C4C, #D83434);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Flip Animation */
+.page-container.flip .front {
+    transform: rotateY(180deg);
+}
+
+.page-container.flip .back {
+    transform: rotateY(0deg);
+}
+
+/* Form Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #008CFF;
+}
+
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+/* Input Icons */
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-wrapper i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #008CFF;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #005BB5;
+    transform: translateY(-2px);
+}
+
+/* Social Login Buttons */
+.social-login button {
+    width: 90%;
+    padding: 10px;
+    background-color: #DD4B39; /* Google Red */
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-login .facebook-login {
+    background-color: #3b5998; /* Facebook Blue */
+}
+
+.social-login i {
+    margin-right: 8px;
+}
+
+.social-login button:hover {
+    transform: scale(1.05);
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    background: #ddd;
+    height: 5px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background: #008CFF;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Text and Links */
+p {
+    color: #555;
+    font-size: 1rem;
+}
+
+span {
+    color: #008CFF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #333;
+    color: white;
+}
+
+body.dark-mode .form-container {
+    background: #222;
+    color: white;
+}
+
+body.dark-mode .input-wrapper i {
+    color: #ddd;
+}
+
+body.dark-mode button {
+    background-color: #555;
+}
+
+body.dark-mode button:hover {
+    background-color: #777;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .page-container {
+        width: 90%;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .social-login button {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+
+    input {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    display: none;
+}
+
+input:invalid + .error {
+    display: block;
+}

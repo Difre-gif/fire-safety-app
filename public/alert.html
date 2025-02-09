@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Fire Alerts - Advanced Dashboard</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/alert.css">
+</head>
+<body>
+    <!-- Container -->
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <h1>🔥 Fire Alerts Dashboard</h1>
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i> Dark Mode
+            </button>
+        </nav>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h2>Monitor Wildfires in Real-Time</h2>
+                <p>Stay informed and track active fire alerts globally. Customize your experience with advanced filters and map views.</p>
+                <button class="btn" id="filter-btn">⚙️ Advanced Filters</button>
+            </div>
+        </header>
+
+        <!-- Alerts Section -->
+        <section class="alerts-section">
+            <h2>Active Fire Alerts</h2>
+            <div id="alerts-container" class="alerts-grid">
+                <!-- Dynamic Alert Cards -->
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map-section">
+            <h2>Interactive Fire Map</h2>
+            <div id="map"></div>
+        </section>
+    </div>
+
+    <!-- Filter Modal -->
+    <div id="filter-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h3>Advanced Filters</h3>
+            <label for="severity-filter">Filter by Severity:</label>
+            <select id="severity-filter">
+                <option value="all">All Severities</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <label for="distance-range">Filter by Distance (km):</label>
+            <input type="range" id="distance-range" min="0" max="100" step="10" value="50">
+            <p>Selected Distance: <span id="distance-value">50 km</span></p>
+            <button class="btn apply-filters">Apply Filters</button>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Leaflet Heatmap -->
+    <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/alert.js"></script>
+</body>
+</html>

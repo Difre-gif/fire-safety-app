@@ -1,0 +1,158 @@
+/* Basic Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #ddd;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #0288D1;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #0288D1;
+    color: white;
+}
+
+/* Contact List - Card Layout */
+.contact-list {
+    display: none;
+    margin-top: 20px;
+}
+
+.contact-list.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.contact-list h2 {
+    color: #333;
+    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #e0e0e0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.contact-details {
+    font-size: 1.2rem;
+    flex-grow: 1;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.quick-dial {
+    font-size: 1rem;
+    padding: 10px 15px;
+    background-color: #D32F2F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quick-dial:hover {
+    background-color: #B71C1C;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .card-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-details {
+        margin: 10px 0;
+    }
+
+    .quick-dial {
+        align-self: flex-start;
+    }
+}

@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d32f2f;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.theme-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s;
+}
+
+.theme-btn:hover {
+    opacity: 0.8;
+}
+
+/* Header Section */
+.header {
+    background: linear-gradient(180deg, #d32f2f, #f57c00);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+    animation: fadeIn 1s ease;
+}
+
+.header-content h2 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.header-content p {
+    margin: 10px 0 20px;
+    font-size: 18px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: white;
+    color: #d32f2f;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #ffebee;
+    transform: scale(1.05);
+}
+
+/* Alerts Section */
+.alerts-section {
+    margin: 30px 0;
+}
+
+.alerts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.alert-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.alert-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.alert-card h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.alert-card .severity {
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.severity.low {
+    background: #ffeb3b;
+    color: #333;
+}
+
+.severity.medium {
+    background: #ff9800;
+    color: #fff;
+}
+
+.severity.high {
+    background: #d32f2f;
+    color: white;
+}
+
+/* Map Section */
+.map-section {
+    margin: 30px 0;
+}
+
+#map {
+    height: 500px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    margin: 100px auto;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    color: #d32f2f;
+}
+
+.close:hover {
+    color: #f57c00;
+}

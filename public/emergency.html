@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts & Fire Department</title>
+    <link rel="stylesheet" href="../styles/emergency.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Emergency Contacts</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#" id="fire-tab">Fire Services</a></li>
+                <li><a href="#" id="police-tab">Police</a></li>
+                <li><a href="#" id="ambulance-tab">Ambulance</a></li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <!-- Fire Services Section -->
+            <div class="contact-list" id="fire-list">
+                <h2>Fire Services</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">🚒</span>
+                        <span class="contact-details">Fire Department 1: 123-456-7890</span>
+                        <button class="quick-dial" onclick="quickDial('123-456-7890')">Call</button>
+                    </div>
+                    <div class="card-back">
+                        <p>Location: 123 Main St</p>
+                        <p>Working Hours: 24/7</p>
+                        <p>Email: firedept1@example.com</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">🚒</span>
+                        <span class="contact-details">Fire Department 2: 987-654-3210</span>
+                        <button class="quick-dial" onclick="quickDial('987-654-3210')">Call</button>
+                    </div>
+                    <div class="card-back">
+                        <p>Location: 456 Elm St</p>
+                        <p>Working Hours: 8 AM - 6 PM</p>
+                        <p>Email: firedept2@example.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Police Section -->
+            <div class="contact-list" id="police-list">
+                <h2>Police</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">🚔</span>
+                        <span class="contact-details">Police Station 1: 321-654-9870</span>
+                        <button class="quick-dial" onclick="quickDial('321-654-9870')">Call</button>
+                    </div>
+                    <div class="card-back">
+                        <p>Location: 789 Oak St</p>
+                        <p>Working Hours: 24/7</p>
+                        <p>Email: policedpt1@example.com</p>
+                    </div>
+                    
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">🚔</span>
+                        <span class="contact-details">Police Station 2: 654-987-1230</span>
+                        <button class="quick-dial" onclick="quickDial('654-987-1230')">Call</button>
+                    </div>
+                    <div class="card-back">
+                        <p>Location: 101 Pine St</p>
+                        <p>Working Hours: 9 AM - 5 PM</p>
+                        <p>Email: policedpt2@example.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ambulance Section -->
+            <div class="contact-list" id="ambulance-list">
+                <h2>Ambulance</h2>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">🚑</span>
+                        <span class="contact-details">Ambulance Service 1: 555-123-4567</span>
+                        <button class="quick-dial" onclick="quickDial('555-123-4567')">Call</button>
+                    </div>
+                    <div class="card-back">
+                        <p>Location: 159 Maple St</p>
+                        <p>Working Hours: 24/7</p>
+                        <p>Email: ambulance1@example.com</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <span class="icon">🚑</span>
+                        <span class="contact-details">Ambulance Service 2: 555-987-6543</span>
+                        <button class="quick-dial" onclick="quickDial('555-987-6543')">Call</button>
+                    </div>
+                    <div class="card-back">
+                        <p>Location: 852 Birch St</p>
+                        <p>Working Hours: 24/7</p>
+                        <p>Email: ambulance2@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/emergency.js"></script>
+</body>
+</html>

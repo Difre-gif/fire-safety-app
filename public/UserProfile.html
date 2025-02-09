@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile & Settings</title>
+  <link rel="stylesheet" href="../styles/UserProfile.css">
+</head>
+<body>
+  <div class="user-profile-settings">
+    <!-- Notification Area -->
+    <div id="notification" class="notification"></div>
+
+    <!-- Header Section -->
+    <header>
+      <div class="avatar-container">
+        <img src="../media/download (3).png" alt="User Avatar" class="avatar" id="avatar">
+      </div>
+      <h1>User Profile & Settings</h1>
+    </header>
+
+    <form id="profileForm">
+      <!-- Personal Information Section -->
+      <section class="personal-info">
+        <h2>Personal Information</h2>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        
+        <button type="button" id="updateInfo" class="update-btn">Update</button>
+      </section>
+
+      <!-- Emergency Contact Section -->
+      <section class="emergency-contact">
+        <h2>Emergency Contact</h2>
+        <label for="emergency-name">Name</label>
+        <input type="text" id="emergency-name" name="emergency-name" placeholder="Enter emergency contact name">
+        
+        <label for="emergency-phone">Phone Number</label>
+        <input type="tel" id="emergency-phone" name="emergency-phone" placeholder="Enter emergency contact phone number">
+        
+        <label for="relationship">Relationship</label>
+        <input type="text" id="relationship" name="relationship" placeholder="Enter your relationship with the contact">
+        
+        <button type="button" id="saveEmergencyContact" class="save-btn">Save Emergency Contact</button>
+      </section>
+
+      <!-- Notification Settings Section -->
+      <section class="notification-settings">
+        <h2>Notification Settings</h2>
+        <label for="fire-alerts">Fire Alert Notifications</label>
+        <input type="checkbox" id="fire-alerts" name="fire-alerts" class="toggle-switch">
+        
+        <label for="location-sharing">Location Sharing for Real-Time Notifications</label>
+        <input type="checkbox" id="location-sharing" name="location-sharing" class="toggle-switch">
+      </section>
+
+      <!-- Privacy Settings Section -->
+      <section class="privacy-settings">
+        <h2>Privacy Settings</h2>
+        <label for="data-sharing">Data Sharing with Third Parties</label>
+        <input type="checkbox" id="data-sharing" name="data-sharing" class="toggle-switch">
+        
+        <label for="location-data">Share Location Data</label>
+        <input type="checkbox" id="location-data" name="location-data" class="toggle-switch">
+      </section>
+    </form>
+  </div>
+
+  <script src="../js/UserProfile.js"></script>
+</body>
+</html>
